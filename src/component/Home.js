@@ -13,7 +13,7 @@ class Home extends Component{
     render(){
         return (
             <>
-                <h1>This is Home</h1>
+                <h1>This is Home Page</h1>
                 {/* <button>Home</button>
                 <Title state1={this.state}/> */}
             </>

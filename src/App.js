@@ -6,30 +6,39 @@ import Title from './component/Title';
 import Home from './component/Home';
 // import Counter from './component/Counter';
 import About from './component/About';
+import { useState } from 'react';
 
 function App() {
 
-  function callHome(){
-    return <Home />
+  const [isHomeClick, setisHomeClick] = useState(false)
+  const [isAboutClick, setisAboutClick] = useState(false)
+  const [isTitleClick, setisTitleClick] = useState(true)
+
+  function callHome() {
+    setisHomeClick(true);
+    setisTitleClick(false);
   }
-  function callAbout(){
-    return <About />
+  function callAbout() {
+    setisAboutClick(true);
+    setisTitleClick(false);
   }
-  
   return (
     // <ThemeProvider theme={theme}>
     <div className="App">
 
       {/* <Counter /> */}
-      <Title />
-      <button onClick={()=>callHome()}>Home</button>
-      <button onClick={()=>callAbout()}>About</button>
+      {isTitleClick && (<div><Title />
+      <button onClick={callHome}>Home</button>
+      <button onClick={callAbout}>About</button></div>)}
+      
+      {isHomeClick ? <Home/> : null}
+      {isAboutClick ? <About/> : null}
       {/* <Title name="Spotify"/>
-        <Title name="Amazon"/>
-        <Title name="Meta"/> */}
+          <Title name="Amazon"/>
+          <Title name="Meta"/> */}
 
-        {/* <Home />
-        <About /> */}
+      {/* <Home />
+          <About /> */}
       {/* <FirstComponent /> */}
     </div>
     // </ThemeProvider>
