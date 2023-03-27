@@ -1,8 +1,10 @@
 import { Component } from "react";
 // import { useState } from "react";
 // import Title from "./Title";
+// import HOC from "./HOC";
+import UserList from "./UserList";
 
-class Home extends Component{
+class Home extends Component {
     // constructor(){
     //     super()
     //     this.state = {
@@ -10,15 +12,32 @@ class Home extends Component{
     //         description: 'My home description'
     //     }
     // }
-    render(){
+
+    userData = [
+        {
+            'id': 1,
+            'name': 'Tarang'
+        },
+        {
+            'id': 2,
+            'name': 'Rishi'
+        },
+        {
+            'id': 3,
+            'name': 'Parth'
+        }
+    ]
+
+    render() {
         return (
             <>
                 <h1>This is Home Page</h1>
                 {/* <button>Home</button>
                 <Title state1={this.state}/> */}
+                <UserList data={this.userData} />
             </>
         )
-        
+
     }
 }
 

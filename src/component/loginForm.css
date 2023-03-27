@@ -1,0 +1,28 @@
+.wrapper {
+    background-color: aquamarine;
+    border-radius: 30px;
+    align-items: left;
+    padding-left: 2vw;
+    padding-right: 10vw;
+    width: 3vw;
+}
+
+label {
+    padding: 10px 0;
+    cursor: pointer;
+    text-align: left;
+    font-weight: 500;
+}
+
+input {
+    border: 2px solid black;
+    border-radius: 5px;
+    margin: 5px 1px;
+}
+
+button[type=submit] {
+    background-color: lightgoldenrodyellow;
+    margin-left: 3vw;
+    cursor: pointer;
+    border-radius: 5px;
+}
